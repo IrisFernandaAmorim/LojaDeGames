@@ -33,10 +33,18 @@ public class ProdutoModel {
 		@Positive (message = "Digite um valor maior do que zero")
 		private BigDecimal preco;
 		
+		//Relacionamentos
+		
 		@ManyToOne
 		@JsonIgnoreProperties ("produto")
 		private CategoriaModel categoria;
+		
+		@ManyToOne
+		@JsonIgnoreProperties("produto")
+		private UsuarioModel usuario;
 
+		//Métodos Getters/Setters
+		
 		public Long getId() {
 			return id;
 		}
@@ -83,6 +91,14 @@ public class ProdutoModel {
 
 		public void setCategoria(CategoriaModel categoria) {
 			this.categoria = categoria;
+		}
+
+		public UsuarioModel getUsuario() {
+			return usuario;
+		}
+
+		public void setUsuario(UsuarioModel usuario) {
+			this.usuario = usuario;
 		}
 		
 }

@@ -21,7 +21,7 @@ import com.lojagame.lojagameverso.repository.ProdutoRepository;
 
 
 @RestController
-@RequestMapping ("/Categoria")
+@RequestMapping ("/Produto")
 @CrossOrigin (origins = "*", allowedHeaders = "*")
 public class ProdutoController {
 	
